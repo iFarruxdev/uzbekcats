@@ -1,10 +1,10 @@
+import React from 'react'
 import Header from '../../components/Header/Header'
-import './Home.css'
 
-const Home = () => {
+const Contact = () => {
   return (
     <Header />
   )
 }
 
-export default Home
+export default Contact

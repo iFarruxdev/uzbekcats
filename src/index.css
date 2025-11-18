@@ -3,11 +3,12 @@
 /* CUSTOM PROPS */
 
 :root {
-  --body-bg: linear-gradient(135deg, #f6d7ff, #d9e7ff);
+  --body-bg: linear-gradient(135deg, #f4e8f7, #d9e7ff);
   --description-color: #777;
   --border-color: #ddd;
   --accent-color: #7b3fe4;
   --accent-color-hover: rgb(113, 41, 238);
+  --accent-color-active: rgb(179, 135, 255);
 }
 
 html {
@@ -23,6 +24,12 @@ html {
   padding: 0;
   font-family: "Poppins", Arial, sans-serif;
   font-weight: 500;
+}
+
+*:focus {
+  outline: 2px dashed var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 1px;
 }
 
 .container {

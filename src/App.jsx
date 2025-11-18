@@ -8,6 +8,8 @@ import Layout from "./layout/Layout";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Profile/Login";
 import { AuthProvider, AuthContext } from "./components/Context/AuthContext";
+import Contact from "./pages/Contact/Contact";
+import About from "./pages/About/About";
 
 function App() {
   const routes = createBrowserRouter([
@@ -28,6 +30,22 @@ function App() {
           element: (
             <AuthContext.Consumer>
               {({ user }) => (!user ? <Login /> : <Navigate to="/" />)}
+            </AuthContext.Consumer>
+          ),
+        },
+        {
+          path: "contact",
+          element: (
+            <AuthContext.Consumer>
+              {({ user }) => (user ? <Contact /> : <Navigate to="/login" />)}
+            </AuthContext.Consumer>
+          ),
+        },
+        {
+          path: "about",
+          element: (
+            <AuthContext.Consumer>
+              {({ user }) => (user ? <About /> : <Navigate to="/about" />)}
             </AuthContext.Consumer>
           ),
         },
