@@ -9,6 +9,7 @@
   --accent-color: #7b3fe4;
   --accent-color-hover: rgb(113, 41, 238);
   --accent-color-active: rgb(179, 135, 255);
+  --badge-bg: linear-gradient( to right, rgb(113, 41, 238), rgb(179, 135, 255));
 }
 
 html {
