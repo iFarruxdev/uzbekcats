@@ -1,10 +1,15 @@
-import Header from '../../components/Header/Header'
-import './Home.css'
+import Header from "../../components/Header/Header";
+import Hero from "../../components/Hero/Hero";
+import "./Home.css";
 
 const Home = () => {
-  return (
-    <Header />
-  )
-}
 
-export default Home
+  return (
+    <div className="site-home">
+      <Header />
+      <Hero />
+    </div>
+  );
+};
+
+export default Home;
