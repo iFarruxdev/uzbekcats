@@ -34,7 +34,7 @@ export default function Favourites() {
     {
       id: 6,
       name: 'Turkish Van Mushuk',
-      description: 'Turkish Van — go‘zal va noyob mushuk zotlaridan biri. Ularning eng mashhur xususiyati — oq junlari va rangli boshi va dumining uchi.',
+      description: "Turkish Van — go‘zal va noyob mushuk zotlaridan biri. Ularning eng mashhur xususiyati — oq junlari va rangli ko'zlari va dumining uchi.",
       image: 'https://d2zp5xs5cp8zlg.cloudfront.net/image-88409-800.jpg',
     },
   ];

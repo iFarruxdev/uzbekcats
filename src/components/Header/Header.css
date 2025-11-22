@@ -96,6 +96,7 @@
     color: var(--accent-color);
     width: 28px;
     height: 28px;
+    cursor: pointer;
   }
   .menu-list {
     display: block;

@@ -25,7 +25,8 @@ const Hero = () => {
             </p>
 
             <div className="hero-buttons">
-              <button className="btn-primary">Mavjud mushuklarni ko‘rish</button>
+              <button onClick={() => { document.getElementById("products").scrollIntoView(); }} className="btn-primary">Mavjud mushuklarni ko‘rish
+              </button>
               <button className="btn-secondary">Batafsil</button>
             </div>
 
