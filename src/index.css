@@ -1,0 +1,49 @@
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;800;900&display=swap);
+
+/* CUSTOM PROPS */
+
+:root {
+  --body-bg: linear-gradient(135deg, #f4e8f7, #d9e7ff);
+  --description-color: #777;
+  --border-color: #ddd;
+  --accent-color: #7b3fe4;
+  --accent-second-color: #ef4444;
+  --accent-color-hover: rgb(113, 41, 238);
+  --accent-color-active: rgb(179, 135, 255);
+  --badge-bg: linear-gradient( to right, rgb(113, 41, 238), rgb(179, 135, 255));
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  font-weight: 500;
+}
+
+*:focus {
+  outline: 2px dashed var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 1px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+body {
+  background-image: var(--body-bg);
+}

@@ -1,0 +1,133 @@
+.modal__container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000a5;
+}
+.modal {
+  width: 100%;
+  max-width: 900px;
+  text-align: left;
+  padding: 55px 40px;
+  background-color: #fff;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.close-modal {
+  position: absolute;
+  background-color: var(--accent-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 3px;
+  cursor: pointer;
+  top: 18px;
+  right: 25px;
+  color: #fff;
+}
+.add-to-cart-button--modal {
+  width: 100%;
+}
+.modal__image {
+  width: 100%;
+  max-width: 450px;
+  height: 530px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-right: 35px;
+}
+.modal__content {
+  width: 100%;
+}
+.modal__item {
+  width: 100%;
+  padding-bottom: 14px;
+  border-bottom: 1.4px solid gray;
+}
+.modal__item:not(:first-child) {
+  margin-top: 20px;
+}
+.modal__key {
+  color: var(--description-color);
+  font-weight: 500;
+}
+.modal__key--description {
+  margin-bottom: 10px;
+}
+.modal__value {
+  color: var(--accent-color);
+}
+.modal__quantity {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  outline: none;
+}
+.modal__quantity--wrapper {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  gap: 14px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 36px;
+  background-color: var(--border-color);
+}
+.modal__calculation-item {
+  width: 30px;
+  height: 75%;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+}
+.modal__calculation-icon {
+  width: 18px;
+  height: 18px;
+}
+
+@media only screen and (max-width: 930px) {
+  .modal {
+    flex-direction: column;
+  }
+  .modal__image {
+    max-width: 100%;
+    margin-bottom: 25px;
+    margin-right: 0;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 490px) {
+  body {
+    overflow: auto !important;
+  }
+  .modal {
+    margin-top: 280px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 50px;
+  }
+  .modal__container {
+    overflow: auto;
+  }
+  .modal__image {
+    height: 220px;
+  }
+  .close-modal {
+    right: 18px;
+  }
+}
