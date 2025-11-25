@@ -1,4 +1,8 @@
-import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  Navigate,
+  RouterProvider,
+} from "react-router-dom";
 import "./App.css";
 import Layout from "./layout/Layout";
 import Home from "./pages/Home/Home";
@@ -9,9 +13,9 @@ import About from "./pages/About/About";
 import Favourites from "./pages/Favourites/Favourites";
 import { FavoritesProvider } from "./components/FavoritesContext/FavoritesContext";
 import { CartProvider } from "./components/Context/CartContext";
+import Shopping from "./pages/Shopping/Shopping";
 
 function App() {
-
   const routes = createBrowserRouter([
     {
       path: "",
@@ -55,6 +59,16 @@ function App() {
             <AuthContext.Consumer>
               {({ user }) =>
                 user ? <Favourites /> : <Navigate to="/favorites" />
+              }
+            </AuthContext.Consumer>
+          ),
+        },
+        {
+          path: "shopping",
+          element: (
+            <AuthContext.Consumer>
+              {({ user }) =>
+                user ? <Shopping /> : <Navigate to="/shopping" />
               }
             </AuthContext.Consumer>
           ),

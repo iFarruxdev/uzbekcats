@@ -3,10 +3,10 @@ import { Heart, Star, ArrowDown } from "lucide-react";
 import { useContext, useState, useEffect } from "react";
 import { FavoritesContext } from "../FavoritesContext/FavoritesContext";
 import CartModal from "../CartModal/CartModal";
-
+import { CartContext } from "../Context/CartContext";
 
 const Products = () => {
-  const [cart, setCart] = useState([]);
+  const { cart, addToCart } = useContext(CartContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedCat, setSelectedCat] = useState(null);
   const [visibleCats, setVisibleCats] = useState(9);
@@ -231,13 +231,6 @@ const Products = () => {
     };
   }, [isModalOpen]);
 
-
-  // const addToCart = (id) => {
-  //   if (!cart.includes(id)) {
-  //     setCart((prev) => [...prev, id]);
-  //   }
-  // };
-
   return (
     <div className="products-section-main" id="products">
       <div className="products-section">
@@ -301,10 +294,12 @@ const Products = () => {
                       setSelectedCat(cat);
                       setIsModalOpen(true);
                     }}
-                    disabled={cart.includes(cat.id)}
+                    disabled={cart.some((item) => item.id === cat.id)}
                     className="add-to-cart-button"
                   >
-                    {cart.includes(cat.id) ? "Savatda" : "Savatga qo‘shish"}
+                    {cart.some((item) => item.id === cat.id)
+                      ? "Savatda"
+                      : "Savatga qo‘shish"}
                   </button>
                 </div>
               </div>

@@ -31,6 +31,11 @@ const Header = () => {
               Aloqa uchun
             </NavLink>
           </li>
+          <li className="site-header__item">
+            <NavLink to="/shopping" className="site-header__link">
+              Savat
+            </NavLink>
+          </li>
           <li className="menu-list__item">
             <NavLink to="/favorites" className="site-header__link">
               Sevimlilar {favorites.length > 0 && <span className="menu-list__count">{favorites.length}</span>}
@@ -56,6 +61,11 @@ const Header = () => {
             <li className="menu-list__item">
               <NavLink to="/contact" className="site-header__link">
                 Aloqa uchun
+              </NavLink>
+            </li>
+            <li className="menu-list__item">
+              <NavLink to="/shopping" className="site-header__link">
+                Savat
               </NavLink>
             </li>
             <li className="menu-list__item">

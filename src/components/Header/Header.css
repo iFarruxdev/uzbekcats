@@ -20,6 +20,7 @@
   font-weight: 600;
   font-size: 32px;
   line-height: 1.2;
+  white-space: nowrap;
 }
 .logo:hover {
   color: var(--accent-color-hover);
@@ -42,6 +43,7 @@
   color: var(--accent-color);
   font-weight: 600;
   font-size: 16px;
+  white-space: nowrap;
 }
 .site-header__link:hover {
   color: var(--accent-color-hover);
@@ -105,7 +107,7 @@
 }
 /* RESPONSIVE */
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 920px) {
   .site-header__list {
     display: none;
   }

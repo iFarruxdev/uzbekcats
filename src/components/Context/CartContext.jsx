@@ -12,6 +12,12 @@ export const CartProvider = ({ children }) => {
     }
   }, []);
 
+  const clearCart = () => {
+    setCart([]);
+    localStorage.removeItem("cart");
+    alert("Xaridingiz uchun rahmat")
+  };
+
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cart));
   }, [cart]);
@@ -21,11 +27,11 @@ export const CartProvider = ({ children }) => {
 
     if (exists) {
       const updated = cart.map((x) =>
-        x.id === item.id ? { ...x, qty: x.qty + 1 } : x
+        x.id === item.id ? { ...x, qty: x.qty + item.qty } : x
       );
       setCart(updated);
     } else {
-      setCart([...cart, { ...item, qty: 1 }]);
+      setCart([...cart, { ...item }]);
     }
   };
 
@@ -56,6 +62,7 @@ export const CartProvider = ({ children }) => {
         increaseQty,
         decreaseQty,
         removeFromCart,
+        clearCart,
       }}
     >
       {children}

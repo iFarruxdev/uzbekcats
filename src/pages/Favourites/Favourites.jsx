@@ -3,18 +3,14 @@ import Header from "../../components/Header/Header";
 import { Heart, Star } from "lucide-react";
 import "./Favourites.css";
 import { FavoritesContext } from "../../components/FavoritesContext/FavoritesContext";
+import { CartContext } from "../../components/Context/CartContext";
+import CartModal from "../../components/CartModal/CartModal";
 
 const Favourites = () => {
   const { favorites, toggleFavorite } = useContext(FavoritesContext);
-  const [cart, setCart] = useState([]);
+  const [selectedCat, setSelectedCat] = useState(null);
 
-  const addToCart = (id) => {
-    if (!cart.includes(id)) {
-      const updated = [...cart, id];
-      setCart(updated);
-      localStorage.setItem("cart", JSON.stringify(updated));
-    }
-  };
+  const { cart } = useContext(CartContext);
 
   const allCats = [
     {
@@ -220,6 +216,13 @@ const Favourites = () => {
 
   return (
     <div className="site-favorites">
+      {selectedCat && (
+        <CartModal
+          selectedCat={selectedCat}
+          closeModal={() => setSelectedCat(null)}
+        />
+      )}
+
       <Header />
 
       <div className="site-favorites__container container">
@@ -271,11 +274,13 @@ const Favourites = () => {
                   </div>
 
                   <button
-                    onClick={() => addToCart(cat.id)}
-                    disabled={cart.includes(cat.id)}
+                    onClick={() => setSelectedCat(cat)}
+                    disabled={cart.some((item) => item.id === cat.id)}
                     className="add-to-cart-button"
                   >
-                    {cart.includes(cat.id) ? "Savatda" : "Savatga qo‘shish"}
+                    {cart.some((item) => item.id === cat.id)
+                      ? "Savatda"
+                      : "Savatga qo‘shish"}
                   </button>
                 </div>
               </div>

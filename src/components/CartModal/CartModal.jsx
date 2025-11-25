@@ -2,9 +2,11 @@ import "./CartModal.css";
 import { Close } from "@mui/icons-material";
 import { Plus, Minus } from "lucide-react";
 import { useState } from "react";
-
-const CartModal = ({selectedCat, closeModal}) => {
+import { useContext } from "react";
+import { CartContext } from "../Context/CartContext";
+const CartModal = ({ selectedCat, closeModal }) => {
   const [quantity, setQuantity] = useState(1);
+  const { addToCart } = useContext(CartContext);
 
   const totalPrice = selectedCat?.price * quantity;
 
@@ -31,9 +33,7 @@ const CartModal = ({selectedCat, closeModal}) => {
             <h3 className="modal__value">{selectedCat?.breed}</h3>
           </div>
           <div className="modal__item">
-            <p className="modal__key modal__key--description">
-              Mushuk haqida:
-            </p>
+            <p className="modal__key modal__key--description">Mushuk haqida:</p>
             <p className="modal__value">{selectedCat?.description}</p>
           </div>
           <div className="modal__item">
@@ -65,7 +65,13 @@ const CartModal = ({selectedCat, closeModal}) => {
             </button>
           </div>
           <div className="modal__item">
-            <button className="add-to-cart-button add-to-cart-button--modal">
+            <button
+              className="add-to-cart-button add-to-cart-button--modal"
+              onClick={() => {
+                addToCart({ ...selectedCat, qty: quantity });
+                closeModal();
+              }}
+            >
               Savatga qo'shish
             </button>
           </div>
