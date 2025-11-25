@@ -191,9 +191,34 @@
   }
 }
 
+@media only screen and (max-width:485px) {
+  .site-shopping__promo {
+    padding: 0;
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+  .site-shopping__title {
+    font-size: 1.6rem;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    padding: 0;
+    margin-bottom: 5px;
+  }
+  .site-shopping__info {
+    font-size: 18px;
+  }
+}
+
 @media only screen and (max-width:440px) {
   .genaral-price-wrapper h3 {
     font-size: 18px;
+  }
+}
+
+@media only screen and (min-width:430px) {
+  .site-shopping-promo__container {
+    padding-left: 64px;
+    padding-right: 64px;
   }
 }
 

@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import "./Shopping.css";
 import { NavLink } from "react-router-dom";
@@ -17,7 +16,7 @@ const Shopping = () => {
       <div className="site-shopping-promo__container container">
         <div className="site-shopping__promo">
           <h2 className="site-shopping__title">Savatchadagi mushukar</h2>
-          {cart.length <= 0 && <p>Hozircha mavjud emas !</p>}
+          {cart.length <= 0 && <p className="site-shopping__info">Hozircha mavjud emas !</p>}
         </div>
       </div>
       {cart.length > 0 && (

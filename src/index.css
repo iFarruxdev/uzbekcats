@@ -17,6 +17,7 @@ html {
   scroll-behavior: smooth;
   box-sizing: border-box;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 *,
@@ -46,4 +47,5 @@ html {
 
 body {
   background-image: var(--body-bg);
+  min-height: 100vh;
 }
