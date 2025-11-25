@@ -53,7 +53,7 @@ const Shopping = () => {
               <h2 className="cat-order__title">Buyurtma xulosasi</h2>
               <ul className="cat-order__list">
                 <li className="cat-order__item">
-                  <span>Buyum ({cart.length})</span>
+                  <span>Mushuklar ({cart.length})</span>
                   {totalPrice.toFixed(3)} UZS
                 </li>
                 <li className="cat-order__item">
