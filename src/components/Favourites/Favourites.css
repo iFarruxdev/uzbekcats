@@ -104,3 +104,10 @@
     padding-right: 0.1rem;
   }
 }
+
+@media only screen and (max-width: 385px) {
+  .famous-cats-container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
