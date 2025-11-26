@@ -6,7 +6,7 @@ const Promo = () => {
       <div className="site-promo__container container">
         <section className="site-promo__cta site-cta">
           {/* <h1>Site Promo Section Title</h1> */}
-          <img className='site-cta__image' src="cta-image-cat.jpg" alt="cat image for promo section" />
+          <img loading='lazy' className='site-cta__image' src="cta-image-cat.jpg" alt="cat image for promo section" />
           <div className="site-cta__content">
             <h2 className='site-cta__title'>
               UzbekCats – Sizning yangi mushuk do‘stingiz shu yerda!

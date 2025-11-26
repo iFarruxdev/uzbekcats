@@ -15,7 +15,7 @@ export const CartProvider = ({ children }) => {
   const clearCart = () => {
     setCart([]);
     localStorage.removeItem("cart");
-    alert("Xaridingiz uchun rahmat")
+    alert("Xaridingiz uchun rahmat ✅")
   };
 
   useEffect(() => {

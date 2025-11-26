@@ -254,7 +254,7 @@ const Products = () => {
           {cats.slice(0, visibleCats).map((cat) => (
             <div key={cat.id} className="card">
               <div className="card-image-container">
-                <img src={cat.image} alt={cat.name} className="card-image" />
+                <img loading="lazy" src={cat.image} alt={cat.name} className="card-image" />
                 <button
                   onClick={() => toggleFavorite(cat.id)}
                   className={`favorite-button ${

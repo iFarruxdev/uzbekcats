@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="hero-section">
       <div className="hero-section__container container">
         <div className="hero-grid">
-          <div className="hero-content">  
+          <div className="hero-content">
             <div className="hero-badge">
               <Sparkles className="badge-icon" />
               <span>O'zingizga hamroh toping</span>
@@ -60,7 +60,7 @@ const Hero = () => {
             <div className="gallery-grid">
               <div className="gallery-column">
                 <div className="cat-card">
-                  <img
+                  <img loading="lazy"
                     src="https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg?auto=compress&cs=tinysrgb&w=400"
                     alt="Luna - British Shorthair"
                   />
@@ -70,7 +70,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="cat-card">
-                  <img
+                  <img loading="lazy"
                     src="https://images.pexels.com/photos/2071873/pexels-photo-2071873.jpeg?auto=compress&cs=tinysrgb&w=400"
                     alt="Oliver - Maine Coon"
                   />
@@ -82,7 +82,7 @@ const Hero = () => {
               </div>
               <div className="gallery-column gallery-column-offset">
                 <div className="cat-card">
-                  <img
+                  <img loading="lazy"
                     src="https://images.pexels.com/photos/1543793/pexels-photo-1543793.jpeg?auto=compress&cs=tinysrgb&w=400"
                     alt="Milo - Persian"
                   />
@@ -92,7 +92,7 @@ const Hero = () => {
                   </div>
                 </div>
                 <div className="cat-card">
-                  <img
+                  <img loading="lazy"
                     src="https://images.pexels.com/photos/982865/pexels-photo-982865.jpeg?auto=compress&cs=tinysrgb&w=400"
                     alt="Bella - Ragdoll"
                   />
