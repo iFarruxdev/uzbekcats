@@ -22,10 +22,10 @@ const Footer = () => {
             <h3 className="footer-heading">Havolalar</h3>
             <ul className="footer-list">
               <li>
-                <Link to="about">Biz haqimizda</Link>
+                <Link to="/about">Biz haqimizda</Link>
               </li>
               <li>
-                <Link to="favorites">Sevimlilar</Link>
+                <Link to="/favorites">Sevimlilar</Link>
               </li>
               <li>
                 <a href="#care">Maxfiylik siyosati</a>
@@ -40,10 +40,10 @@ const Footer = () => {
             <h3 className="footer-heading">Yordam</h3>
             <ul className="footer-list">
               <li>
-                <a href="#faq">Aloqa uchun</a>
+                <Link to="/contact">Aloqa uchun</Link>
               </li>
               <li>
-                <a href="#contact">Qanday xarid qilish</a>
+                <a href="#">Qanday xarid qilish</a>
               </li>
               <li>
                 <a href="#privacy">To‘lov usullari</a>

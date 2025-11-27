@@ -1,3 +1,16 @@
+.site-shopping {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.site-shopping > header,
+.site-shopping > footer {
+  flex-shrink: 0;
+}
+.site-shopping > .site-shopping-promo__container,
+.site-shopping__items {
+  flex-grow: 1;
+}
 .site-shopping__promo {
   padding-top: 40px;
   padding-bottom: 40px;
@@ -144,7 +157,7 @@
   cursor: pointer;
 }
 
-@media only screen and (max-width:1305px) {
+@media only screen and (max-width: 1305px) {
   .shopping-items__container {
     flex-direction: column;
     gap: 35px;
@@ -154,7 +167,7 @@
   }
 }
 
-@media only screen and (max-width:815px) {
+@media only screen and (max-width: 815px) {
   .cat-dess__image {
     max-width: 260px;
     margin-right: 20px;
@@ -173,7 +186,7 @@
   }
 }
 
-@media only screen and (max-width:705px) {
+@media only screen and (max-width: 705px) {
   .shopping-item__cat-dess {
     flex-direction: column;
   }
@@ -191,7 +204,7 @@
   }
 }
 
-@media only screen and (max-width:485px) {
+@media only screen and (max-width: 485px) {
   .site-shopping__promo {
     padding: 0;
     padding-top: 24px;
@@ -209,20 +222,20 @@
   }
 }
 
-@media only screen and (max-width:440px) {
+@media only screen and (max-width: 440px) {
   .genaral-price-wrapper h3 {
     font-size: 18px;
   }
 }
 
-@media only screen and (min-width:430px) {
+@media only screen and (min-width: 430px) {
   .site-shopping-promo__container {
     padding-left: 64px;
     padding-right: 64px;
   }
 }
 
-@media only screen and (max-width:385px) {
+@media only screen and (max-width: 385px) {
   .shopping-items__container {
     padding-left: 25px;
     padding-right: 25px;

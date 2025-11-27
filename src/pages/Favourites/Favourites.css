@@ -1,3 +1,15 @@
+.site-favorites {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.site-favorites > header,
+.site-favorites > footer {
+  flex-shrink: 0;
+}
+.site-favorites > .site-favorites__container {
+  flex-grow: 1;
+}
 .empty-cats {
   text-align: center;
   padding-top: 40px;
@@ -15,26 +27,26 @@
   color: var(--accent-color);
 }
 
-@media only screen and (max-width:485px) {
+@media only screen and (max-width: 485px) {
   .empty-cats {
     font-size: 18px;
     padding-bottom: 25px;
     padding-top: 25px;
   }
 }
-@media only screen and (min-width:430px) {
+@media only screen and (min-width: 430px) {
   .site-favorites__container {
     padding-left: 64px;
     padding-right: 64px;
   }
 }
-@media only screen and (max-width:385px) {
+@media only screen and (max-width: 385px) {
   .site-favorites__container {
     padding-left: 25px;
     padding-right: 25px;
   }
 }
-@media only screen and (max-width:350px) {
+@media only screen and (max-width: 350px) {
   .site-favorites__container {
     padding-left: 20px;
     padding-right: 20px;

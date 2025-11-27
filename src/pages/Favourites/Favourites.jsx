@@ -5,6 +5,7 @@ import "./Favourites.css";
 import { FavoritesContext } from "../../components/FavoritesContext/FavoritesContext";
 import { CartContext } from "../../components/Context/CartContext";
 import CartModal from "../../components/CartModal/CartModal";
+import Footer from "../../components/Footer/Footer";
 
 const Favourites = () => {
   const { favorites, toggleFavorite } = useContext(FavoritesContext);
@@ -288,6 +289,7 @@ const Favourites = () => {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

@@ -3,6 +3,7 @@ import "./Shopping.css";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { CartContext } from "../../components/Context/CartContext";
+import Footer from "../../components/Footer/Footer";
 
 const Shopping = () => {
 
@@ -80,6 +81,7 @@ const Shopping = () => {
           </div>
         </section>
       )}
+      <Footer />
     </div>
   );
 };
